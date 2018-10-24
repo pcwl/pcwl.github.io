@@ -11,7 +11,7 @@
 
     <title>
         
-        pcwl 的博客 | pcwl Blog
+        Mac写入镜像到sd卡 - pcwl 的博客 | pcwl Blog
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li class="active">
+            <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac-写入镜像到-sd-卡"><span class="toc-text">Mac 写入镜像到 sd 卡</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#可通过此方法制作-win-启动盘或给-Raspberry-Pi-刷系统"><span class="toc-text">可通过此方法制作 win 启动盘或给 Raspberry Pi 刷系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#步骤"><span class="toc-text">步骤</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#树莓派官方-Mac-下烧录指导"><span class="toc-text">树莓派官方 Mac 下烧录指导</span></a></li></ol></li></ol>
+</div>
+    
 </div>
 
 
@@ -111,54 +115,69 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 576px">
-    
-    <div class="post-preview">
-        <div class="post-time">2018-10-24</div>
-        <div class="post-info">
-            <a href="/2018/10/24/Mac写入镜像到sd卡/">
-                <h3>
-                    Mac写入镜像到sd卡
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#Mac" title="Mac">Mac</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2015-08-06</div>
-        <div class="post-info">
-            <a href="/2015/08/06/不定期更新——五味鸡汤/">
-                <h3>
-                    不定期更新——五味鸡汤
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#摘抄" title="摘抄">摘抄</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
-    </div>
-    
-</div>
-<ul class="pager">
-    
-    
-</ul>
 
+
+<div class="post-container">
+    <div class="post-title">
+        Mac写入镜像到sd卡
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-10-24 16:45:11</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#Mac" title="Mac">Mac</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h3 id="Mac-写入镜像到-sd-卡"><a href="#Mac-写入镜像到-sd-卡" class="headerlink" title="Mac 写入镜像到 sd 卡"></a>Mac 写入镜像到 sd 卡</h3><h5 id="可通过此方法制作-win-启动盘或给-Raspberry-Pi-刷系统"><a href="#可通过此方法制作-win-启动盘或给-Raspberry-Pi-刷系统" class="headerlink" title="可通过此方法制作 win 启动盘或给 Raspberry Pi 刷系统"></a>可通过此方法制作 win 启动盘或给 Raspberry Pi 刷系统</h5><h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><ul>
+<li><p>如果 U 盘需要格式化，可用磁盘工具处理</p>
+</li>
+<li><p>查看挂载位置</p>
+<blockquote>
+<p>   <code>diskutil list</code></p>
+</blockquote>
+</li>
+<li><p>卸载设备</p>
+<blockquote>
+<p>   <code>diskutil unmountDisk</code></p>
+</blockquote>
+</li>
+<li><p>用 dd 命令写入镜像</p>
+<blockquote>
+<p>   <code>sudo dd bs=1m if=目标镜像 of=设备位置</code></p>
+</blockquote>
+<p>过程中 ctrl + t 可查看进度</p>
+</li>
+<li><p>写入完毕后卸载或弹出设备就可以使用了</p>
+</li>
+</ul>
+<h5 id="树莓派官方-Mac-下烧录指导"><a href="#树莓派官方-Mac-下烧录指导" class="headerlink" title="树莓派官方 Mac 下烧录指导"></a>树莓派官方 Mac 下烧录指导</h5><p><a href="https://www.raspberrypi.org/documentation/installation/installing-images/mac.md" target="_blank" rel="noopener">链接</a></p>
+
+        
+            <div class="donate-container">
+    <div class="donate-button">
+        <button id="donate-button">赞赏</button>
+    </div>
+    <div class="donate-img-container hide" id="donate-img-container">
+        <img id="donate-img" src="" data-src="/img/donate.jpeg">
+        <p> 感谢鼓励 </p>
+    </div>
+</div>
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+    </div>
+</div>
     </div>
 </div>
 
@@ -205,7 +224,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
